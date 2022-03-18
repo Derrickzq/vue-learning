@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>初始Vue</title>
+    <!-- /*============================== 引入Vue ==============================*/ -->
+    <script type="text/javascript" src="../js/vue.js"></script>
+</head>
+<body>
+    <!-- 准备好容器 -->
+    <div id="root">
+        <h1>Hello, {{name}}</h1>
+    </div>
+
+    <div class="duplicate">
+        <h1>Hello, {{name}} 1 </h1>
+        <h1>指令标题</h1>
+        <!-- <a href="https://www.zhihu.com/hot">zhihu 热榜</a> -->
+        <a v-bind:href="url">zhihu</a>
+    </div>
+
+    <div class="deplicate">
+        <h1>Hello, {{name}} 2 </h1>
+    </div>
+
+    <script type="text/javascript">
+        Vue.config.productionTip = false
+        // 创建Vue实例
+        const x = new Vue({
+            el:'#root',  //el用于制定当前vue实例为哪一个容器服务， 值通常为css选择器字符串
+            data:{ //data中用于存储数据，数据供el所指定的容器使用，值我们暂时先写成一个对象
+                name:'尚硅谷'
+            }
+        })
+        const y = new Vue({
+            el:'.duplicate',  
+            data:{ 
+                name:'尚硅谷',
+                url:'https://www.zhihu.com/hot'
+            }
+        })
+        const z = new Vue({
+            el:'.duplicate',  
+            data:{ 
+                address:'尚硅谷'
+            }
+        })
+        const f = 
+
+    // vue实例和容器一一对应，且相互之间不能覆盖
+    </script>
+</body>
+</html>
